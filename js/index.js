@@ -98,18 +98,6 @@ addNewTask = () => {
 
 moveTaskToOngoing = () => {
 
-    let parentDivOngoing = document.querySelector(".item-task-ongoing")
-    let itemDivOngoing = document.createElement("div")
-    
-    let itemUnorderedList = document.createElement("ul")
-    let itemList = document.createElement("li")
-    
-    itemDivOngoing.classList.add("task-item-child-ongoing")
-
-    parentDivOngoing.appendChild(itemDivOngoing)
-    itemDivOngoing.appendChild(itemUnorderedList)
-    itemUnorderedList.appendChild(itemList)
-
-    alert("Hello: ")
+    alert("Still in progress and will add a function to move the task to a new coloumn")
 
 }
