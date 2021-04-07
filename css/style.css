@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Navigation Bar Area */
+
+.nav {
+    background-color: #FF9A8D;
+    height: 3em;
+    text-align: right;
+}
+
+.user-name {
+    padding-top: 0.7em;
+    margin-right: 2em;
+}
+
+/* Main container Area */
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.category-divider {
+    /* background-color:#C4C4C4; */
+    padding: 1em;
+    width: 50em;
+    background-color: rgba(196, 196, 196, 0.20);
+    border-radius: 4px;
+    margin-top: 1em;
+    text-align: center;
+    /* box-shadow: 1px 2px 2px gray; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-header {
+    margin: 0;
+    padding: 0;
+    width: 30%;
+    margin-bottom: 2em;
+}
+
+
+/* Button and Popup in adding the task */
+
+
+
+.input-add-task {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 80%;
+    /* background-color: red; */
+}
+
+/* add and save button toggle ***********************************/
+.btn-add-task, .btn-save-task, .btn-cancel-task {
+    padding: 1em;
+    font-size: 1rem;
+    font-weight: normal;
+    background-color: #FF9A8D;
+    border: none;
+    border-radius: 4px;
+    /* width: 40em; */
+    /* box-shadow: 1px 2px 2px gray; */
+    transition: 0.4s;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-add-task:hover, .btn-add-task:focus  {
+    cursor: pointer;
+    background-color: hsl(7, 89%, 72%);
+}
+
+.btn-save-task:hover, .btn-save-task:focus {
+    cursor: pointer;
+    background-color: hsl(7, 89%, 72%);
+}
+
+.btn-cancel-task:hover, .btn-cancel-task:focus {
+    cursor: pointer;
+    background-color: hsl(7, 89%, 72%);
+}
+
+
+.btn-add-task-Hide {
+    display: none;
+}
+
+.btn-save-task-Hide {
+    display: none;
+}
+
+.btn-cancel-task-Hide {
+    display: none;
+}
+
+.btn-save-cancel {
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* *********************************************************** */
+
+.add-task-popup {
+    display: flex;
+    flex-direction: column;
+    background-color: #FF9A8D;
+    margin-top: -0.2em;
+    align-items: center;    
+    border-radius: 4px;
+}
+
+#new-task-text-input {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    margin-top: 1em;
+    width: 90%;
+    border-radius: 4px;
+    border: none;
+}
+
+.completion-date-header {
+    margin-top: 0.5em;
+    font-size: 0.7rem;
+}
+
+#task-completion-date {
+    margin-top: 0.5em;
+    margin-bottom: 0.8em;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    border: none;
+}
+
+/* change pop up to visible and not visible */
+
+.add-task-pop-notVisible {
+    display: none;
+}
+
+.add-task-pop-visible {
+    display: flex;
+    transition: all 0.2s ease-in-out;
+    animation-name: popin;
+      animation-duration: 0.5s;
+      animation-timing-function: easeout;
+}
+
+@keyframes popin {
+    0% {
+      transform: scale(0.2);
+    }
+    50% {
+      transform: scale(1.2);
+      animation-timing-function: easeout;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* task items style */
+
+  .item-task {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .task-item-child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 1rem;
+    background-color: #FF9A8D;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1em;
+    width: 80%;
+    border-radius: 4px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    animation-name: popinB;
+      animation-duration: 0.5s;
+      animation-timing-function: easeout;
+  }
+
+  .task-item-child:hover, .task-item-child:focus {
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+  @keyframes popinB {
+    0% {
+      transform: scale(0.2);
+    }
+    50% {
+      transform: scale(1.2);
+      animation-timing-function: easeout;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Text Node Style */
+
+  .itemTaskText {
+      margin-left: 0;
+      padding-left: 0;
+  }
+
+  .material-icons {
+      margin-right: 0.7em;
+      font-size: 100px;
+      transition: all .2s ease-in-out;
+  }
+
+  .material-icons:hover, .material-icons:focus {
+      cursor: pointer;
+      transform: scale(1.8);
+  }
+
+  li {
+    width: 80%;
+  }
+
+  ul {
+    width: 65%;
+}
+
+  .item-date-text-node {
+    list-style-type: none;
+      margin-top: 0.5em;
+      font-size: 0.7rem;
+      opacity: 0.6;
+      width: 100%;
+  }
+
+  .task-icon {
+    transform: scale(1.5);
+    margin: 0;
+  }
+
+  .btn {
+    width: 5em;
+    transition: all 0.2s ease-in-out;
+    animation-name: popinC;
+      animation-duration: 0.5s;
+      animation-timing-function: easeout;
+}
+
+@keyframes popinC {
+    0% {
+      transform: scale(0.2);
+    }
+    50% {
+      transform: scale(1.2);
+      animation-timing-function: easeout;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Item task Ongoing */
+
+  .item-task-ongoing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-item-child-ongoing {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    font-size: 1rem;
+    background-color: #AED6DC;
+    padding: 2em;
+    margin: 0;
+    margin-bottom: 1em;
+    width: 80%;
+    border-radius: 4px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    animation-name: popinB;
+      animation-duration: 0.5s;
+      animation-timing-function: easeout;
+  }

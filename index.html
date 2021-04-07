@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <title>My Todo List</title>
+</head>
+<body>
+
+        <div class="nav">
+            <p class="user-name"></p>
+        </div> 
+        <div class="main-container">
+            <!-- Upcoming Task -->
+            <div class="category-divider upcoming-divider">
+                <!-- <h3 class="category-header header-upcoming-task">Upcoming Tasks</h3> -->
+                <h3 class="category-header header-upcoming-task">Personal Tasks</h3>
+                <div class="item-task">
+
+                </div>
+                <div class="input-add-task">
+                    <div class="button-add-save">
+                        <div id="btn-add-task" class="btn btn-add-task" onclick="togglePopUpWindow()">New Task <span class="plus-text">+</span></div>
+                        <div class="btn-save-cancel">
+                            <div id="btn-save-task" class="btn btn-save-task btn-save-task-Hide" onclick="togglePopUpWindow()"><span class="material-icons task-icon">task_alt</span></div>
+                            <div id="btn-cancel-task" class="btn btn-cancel-task btn-cancel-task-Hide" onclick="toggleCancelWindow()"><span class="material-icons task-icon">highlight_off</span></div>
+                        </div>
+                    </div>
+
+                    <div class="add-task-popup add-task-pop-notVisible">
+                        <input type="text" id="new-task-text-input" name="new-task-text-input" placeholder="Input task..." required>
+                        <label class="completion-date-header" for="task-completion-date">Completion Date</label>
+                        <input type="date" id="task-completion-date" name="task-completion-date">
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Ongoing Tasks
+            <div class="category-divider ongoing-divider">
+                <h3 class="category-header">In Progress</h3>
+                <div class="item-task-ongoing">
+
+                </div>
+            </div>
+
+            <-- Completed Tasks -->
+            <!-- <div class="category-divider completed-divider">
+                <h3 class="category-header">Completed</h3>
+            </div> --> 
+        </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
